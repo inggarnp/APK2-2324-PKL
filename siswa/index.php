@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
+if (!isset($_SESSION['username']) || $_SESSION['role'] != 'siswa') {
     header("Location: ../index.php");
     exit();
 }
@@ -9,10 +9,10 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dashboard Admin</title>
+    <title>Dashboard Siswa</title>
 </head>
 <body>
-    <h2>Selamat Datang, <?php echo $_SESSION['username']; ?> (Admin)</h2>
+    <h2>Selamat Datang, <?php echo $_SESSION['username']; ?> (Siswa)</h2>
     <a href="../inc/logout.php">Logout</a>
 </body>
 </html>
